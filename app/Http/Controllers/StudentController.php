@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-class studentController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
