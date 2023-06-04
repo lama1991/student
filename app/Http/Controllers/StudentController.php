@@ -8,7 +8,7 @@ use App\Models\Student;
 use Illuminate\Http\Request;
 // use PHPUnit\TextUI\Configuration\Group;
 
-class studentController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
