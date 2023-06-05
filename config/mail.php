@@ -28,7 +28,11 @@ return [
     | sending an e-mail. You will specify which one you are using for your
     | mailers below. You are free to add additional mailers as required.
     |
+<<<<<<< HEAD
     | Supported: "smtp", "sendmail", "mailgun", "ses",
+=======
+    | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
+>>>>>>> 20f302eee33abdc8b8360dc3ad6ec07bc829e864
     |            "postmark", "log", "array", "failover"
     |
     */
@@ -36,13 +40,21 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
+<<<<<<< HEAD
+=======
+            'url' => env('MAIL_URL'),
+>>>>>>> 20f302eee33abdc8b8360dc3ad6ec07bc829e864
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
+<<<<<<< HEAD
             'auth_mode' => null,
+=======
+            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+>>>>>>> 20f302eee33abdc8b8360dc3ad6ec07bc829e864
         ],
 
         'ses' => [
@@ -51,15 +63,31 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
+<<<<<<< HEAD
+=======
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+>>>>>>> 20f302eee33abdc8b8360dc3ad6ec07bc829e864
         ],
 
         'postmark' => [
             'transport' => 'postmark',
+<<<<<<< HEAD
+=======
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+>>>>>>> 20f302eee33abdc8b8360dc3ad6ec07bc829e864
         ],
 
         'sendmail' => [
             'transport' => 'sendmail',
+<<<<<<< HEAD
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -t -i'),
+=======
+            'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
+>>>>>>> 20f302eee33abdc8b8360dc3ad6ec07bc829e864
         ],
 
         'log' => [
